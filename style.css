@@ -1,0 +1,20 @@
+/* Blood Texture Effect */
+#intro-text {
+    background: linear-gradient(to bottom, #7a0000 20%, #2a0000 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px #4a0404);
+}
+
+@keyframes bloodFadeIn {
+    0% { opacity: 0; transform: scale(0.9) translateY(-20px); filter: blur(10px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); filter: blur(0px); }
+}
+
+.blood-visible { animation: bloodFadeIn 2.5s forwards; }
+
+body { transition: background-color 1s ease, color 1s ease; }
+
+.hidden { display: none !important; }
+
+#main-content { transition: opacity 1.5s ease; }
