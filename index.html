@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seniors Farewell | 2026</title>
+    <title>The Last Hope | Farewell 2026</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -14,67 +14,69 @@
         <h1 id="intro-text" class="text-6xl md:text-8xl font-black tracking-tighter text-red-800 opacity-0 select-none text-center">
             FAREWELL <br> 2K25-26
         </h1>
-        <p class="text-red-900 mt-10 animate-pulse uppercase tracking-[0.5em] text-sm font-bold">Click to Enter the Void</p>
+        <p class="text-red-900 mt-10 animate-pulse uppercase tracking-[0.5em] text-sm font-bold">Click to Start the ending series 
     </div>
 
     <div id="loading-screen" class="hidden fixed inset-0 z-[200] bg-black flex flex-col items-center justify-center">
         <div class="absolute inset-0 bg-gradient-to-t from-[#B76E79]/20 to-transparent animate-pulse"></div>
-        <img id="anime-gif" src="" class="w-72 h-72 object-contain mb-8 filter drop-shadow-[0_0_20px_rgba(183,110,121,0.8)]">
-        <div class="w-64 bg-gray-800 h-1 rounded-full overflow-hidden">
-            <div id="progress-bar" class="bg-[#B76E79] h-full w-0 transition-all duration-[3000ms]"></div>
+        <img id="anime-gif" src="" class="w-72 h-72 object-contain mb-8 filter drop-shadow-[0_0_20px_rgba(183,110,121,0.8)] rounded-lg border-2 border-[#B76E79]/30">
+        <div class="w-64 bg-gray-800 h-1.5 rounded-full overflow-hidden">
+            <div id="progress-bar" class="bg-gradient-to-r from-[#B76E79] to-[#E5B2B9] h-full w-0 transition-all duration-[3000ms]"></div>
         </div>
-        <p id="loading-text" class="mt-4 uppercase tracking-[0.5em] text-xs text-[#B76E79] animate-pulse">Initializing Domain Expansion...</p>
+        <p id="loading-text" class="mt-4 uppercase tracking-[0.4em] text-xs metallic-gold animate-pulse text-[#B76E79]">Initializing Domain Expansion...</p>
     </div>
 
-    <main id="main-content" class="min-h-screen flex flex-col items-center justify-center p-6 text-center opacity-0">
+    <main id="main-content" class="min-h-screen flex flex-col items-center justify-center p-6 text-center opacity-0 transition-opacity duration-1000">
         
         <section id="hook" class="space-y-6">
-            <h2 class="text-4xl md:text-5xl font-bold italic">So there you are...</h2>
+            <h2 class="text-4xl md:text-6xl font-bold metallic-gold italic">So there you are 👀...</h2>
             <p class="text-xl opacity-70 italic">Ready for a last hope, dear fellas?</p>
-            <button onclick="showStreams()" class="mt-8 px-10 py-3 border border-[#B76E79] text-[#B76E79] hover:bg-[#B76E79] hover:text-white transition-all uppercase tracking-widest font-bold">Choose Your Path</button>
+            <button onclick="showStreams()" class="mt-8 metallic-button uppercase tracking-widest font-bold">Choose Your Path</button>
         </section>
 
-        <section id="streams" class="hidden w-full max-w-4xl space-y-10">
-            <h2 class="text-3xl uppercase tracking-widest">Select your struggle:</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <button onclick="selectStream('science')" class="p-8 border-2 border-[#B76E79]/30 hover:border-[#B76E79] bg-black/40 hover:scale-105 transition-all">🧪 SCIENCE</button>
-                <button onclick="selectStream('commerce')" class="p-8 border-2 border-[#B76E79]/30 hover:border-[#B76E79] bg-black/40 hover:scale-105 transition-all">📈 COMMERCE</button>
-                <button onclick="selectStream('humanities')" class="p-8 border-2 border-[#B76E79]/30 hover:border-[#B76E79] bg-black/40 hover:scale-105 transition-all">🎨 HUMANITIES</button>
+        <section id="streams" class="hidden w-full max-w-5xl space-y-10">
+            <h2 class="text-3xl tracking-[0.2em] uppercase">Select your struggle for best:</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div onclick="selectStream('science')" class="stream-card">🔬 Science 🖋️</div>
+                <div onclick="selectStream('commerce')" class="stream-card">📈 Commerce 💸</div>
+                <div onclick="selectStream('humanities')" class="stream-card">🎨 Humanities 🍃</div>
             </div>
         </section>
 
         <section id="prompt" class="hidden space-y-8">
             <h2 id="streamQuote" class="text-2xl italic max-w-lg mx-auto leading-relaxed"></h2>
-            <div class="flex flex-col items-center space-y-6">
-                <input type="text" id="userInput" placeholder="Type YES..." class="bg-transparent border-b-2 border-[#B76E79] text-center text-3xl focus:outline-none p-2 uppercase w-64 tracking-tighter">
-                <button onclick="checkInput()" class="enter-btn uppercase">Enter the Sequel</button>
-            </div>
+            <input type="text" id="userInput" placeholder="Type YES..." class="bg-transparent border-b-2 border-[#B76E79] text-center text-4xl focus:outline-none p-4 uppercase w-72 metallic-gold">
+            <br>
+            <button onclick="checkInput()" class="metallic-button mt-4 uppercase">Enter the Sequel</button>
         </section>
 
-        <section id="reveal" class="hidden space-y-8 pb-10">
-            <div class="inline-block border-t-2 border-b-2 py-6 px-12 border-[#B76E79] mb-4">
-                <h1 class="text-5xl md:text-8xl font-bold tracking-[0.3em] text-[#B76E79]">FAREWELL</h1>
-            </div>
+        <section id="reveal" class="hidden relative space-y-8 pb-10">
+            <div id="particle-container" class="fixed inset-0 pointer-events-none z-10"></div>
             
-            <div class="space-y-4">
-                <p class="text-2xl font-semibold">EAST POINT SCHOOL</p>
-                <p class="text-[#B76E79] text-3xl font-bold">7th February 2026 | 10:00 AM</p>
-            </div>
+            <div class="relative z-20">
+                <div class="inline-block border-t-2 border-b-2 py-8 px-16 border-[#B76E79] mb-4">
+                    <h1 class="text-6xl md:text-9xl font-bold tracking-[0.3em] metallic-gold">FAREWELL</h1>
+                </div>
+                
+                <div class="space-y-4">
+                    <p class="text-3xl font-bold tracking-widest">EAST POINT SCHOOL</p>
+                    <p class="text-[#B76E79] text-2xl font-semibold">7th February 2026 | 10:00 AM</p>
+                </div>
 
-            <div class="max-w-md mx-auto mt-12 p-8 border-l-4 border-[#B76E79] bg-white/5 text-left italic shadow-2xl">
-                <p class="text-lg leading-relaxed">
-                    "The screen is fading, the credits are about to roll, but the sequel is just beginning. 
-                    You've survived the toughest arcs—now it's time for one final celebration. 
-                    <strong>Don't be a side character at your own party.</strong>"
-                </p>
-                <p class="mt-6 font-bold text-[#B76E79] tracking-widest uppercase">— See you on the other side, Legends.</p>
-            </div>
+                <div class="max-w-xl mx-auto mt-12 p-10 bg-black/60 border border-[#B76E79]/30 rounded-2xl shadow-2xl backdrop-blur-md">
+                    <p class="text-xl italic leading-relaxed">
+                        "The screen is fading, the credits are about to roll, but the sequel is just beginning."
+                    </p>
+                    <p class="mt-6 font-bold metallic-gold text-xl">— SEE YOU THERE, LEGENDS —</p>
+                </div>
 
-            <div id="countdown" class="text-lg tracking-[0.4em] text-[#B76E79] font-mono mt-12 opacity-80"></div>
+                <div id="countdown" class="text-xl tracking-[0.5em] metallic-gold font-mono mt-12 block"></div>
+
+                <button onclick="rewatchIntro()" class="mt-12 opacity-40 hover:opacity-100 text-xs tracking-widest uppercase border-b border-[#B76E79] transition-all">Rewatch the Intro Arc</button>
+            </div>
         </section>
-
     </main>
 
     <script src="script.js"></script>
 </body>
-    </html>
+                    </html>
