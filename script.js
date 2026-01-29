@@ -113,27 +113,4 @@ function startCountdown() {
     }, 1000);
 }
 
-function rewatchIntro() { location.reload();         // Transition to Final Reveal
-        setTimeout(() => {
-            document.body.classList.add('glitch-flash');
-            setTimeout(() => {
-                document.body.classList.remove('glitch-flash');
-                loader.classList.add('hidden');
-                document.getElementById('reveal').classList.remove('hidden');
-                startCountdown();
-            }, 300);
-        }, 3500);
-    }
-}
-
-function startCountdown() {
-    const target = new Date("Feb 7, 2026 10:00:00").getTime();
-    setInterval(() => {
-        const now = new Date().getTime();
-        const diff = target - now;
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        document.getElementById('countdown').innerHTML = `T-MINUS: ${days}d ${hours}h ${mins}m UNTIL FREEDOM`;
-    }, 1000);
-    }
+function rewatchIntro() { location.reload(); }
