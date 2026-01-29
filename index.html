@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seniors Farewell | 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#1C1C1C] text-[#FFF4E8] overflow-x-hidden font-serif">
+
+    <div id="intro-screen" class="fixed inset-0 bg-black flex flex-col items-center justify-center z-[100] cursor-pointer">
+        <canvas id="bloodCanvas" class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
+        <h1 id="intro-text" class="text-6xl md:text-8xl font-black tracking-tighter text-red-800 opacity-0 select-none text-center">
+            FAREWELL <br> 2K25-26
+        </h1>
+        <p class="text-red-900 mt-10 animate-pulse uppercase tracking-[0.5em] text-sm font-bold">Click to Enter the Void</p>
+    </div>
+
+    <main id="main-content" class="min-h-screen flex flex-col items-center justify-center p-6 text-center opacity-0">
+        
+        <section id="hook" class="space-y-6">
+            <h2 class="text-4xl md:text-5xl font-bold italic">So there you are...</h2>
+            <p class="text-xl opacity-70">Ready for a last hope, dear fellas?</p>
+            <button onclick="showStreams()" class="mt-8 px-10 py-3 border border-[#B76E79] text-[#B76E79] hover:bg-[#B76E79] hover:text-white transition-all uppercase tracking-widest">Choose Your Path</button>
+        </section>
+
+        <section id="streams" class="hidden w-full max-w-4xl space-y-10">
+            <h2 class="text-3xl">Select your struggle:</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <button onclick="selectStream('science')" class="p-8 border border-[#B76E79]/30 hover:border-[#B76E79] bg-black/20">🧪 SCIENCE</button>
+                <button onclick="selectStream('commerce')" class="p-8 border border-[#B76E79]/30 hover:border-[#B76E79] bg-black/20">📈 COMMERCE</button>
+                <button onclick="selectStream('humanities')" class="p-8 border border-[#B76E79]/30 hover:border-[#B76E79] bg-black/20">🎨 HUMANITIES</button>
+            </div>
+        </section>
+
+        <section id="prompt" class="hidden space-y-6">
+            <h2 id="streamQuote" class="text-2xl italic max-w-lg mx-auto leading-relaxed"></h2>
+            <div class="mt-6">
+                <input type="text" id="userInput" placeholder="Type YES..." class="bg-transparent border-b-2 border-[#B76E79] text-center text-3xl focus:outline-none p-2 uppercase w-64">
+            </div>
+            <button onclick="checkInput()" class="mt-4 opacity-50 hover:opacity-100">[ PRESS ENTER ]</button>
+        </section>
+
+        <section id="reveal" class="hidden space-y-8 animate-fade-in">
+            <div class="inline-block border-t border-b py-4 px-10 border-[#B76E79] mb-4">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-[0.2em] text-[#B76E79]">FAREWELL</h1>
+            </div>
+            <div class="space-y-2">
+                <p class="text-2xl font-semibold">East Point School</p>
+                <p class="text-[#B76E79] text-xl">7th February 2026 | 10:00 AM</p>
+            </div>
+            <div id="countdown" class="text-sm tracking-widest opacity-60 font-mono mt-10"></div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
