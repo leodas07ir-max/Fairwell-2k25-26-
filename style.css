@@ -1,4 +1,4 @@
-/* Blood Texture Effect */
+/* Blood Texture */
 #intro-text {
     background: linear-gradient(to bottom, #7a0000 20%, #2a0000 80%);
     -webkit-background-clip: text;
@@ -15,6 +15,37 @@
 
 body { transition: background-color 1s ease, color 1s ease; }
 
-.hidden { display: none !important; }
+/* The "Yes" Button Upgrade */
+.enter-btn {
+    background: linear-gradient(45deg, #B76E79, #8e555e);
+    color: white;
+    padding: 12px 40px;
+    border-radius: 2px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    box-shadow: 0 0 20px rgba(183, 110, 121, 0.4);
+    transition: all 0.3s ease;
+}
 
-#main-content { transition: opacity 1.5s ease; }
+.enter-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(183, 110, 121, 0.6);
+    filter: brightness(1.1);
+}
+
+/* Cinematic Flash */
+.glitch-flash {
+    animation: flash 0.25s ease-in-out infinite;
+}
+
+@keyframes flash {
+    0% { background-color: #B76E79; opacity: 0.3; }
+    50% { background-color: #000; opacity: 1; }
+    100% { background-color: #B76E79; opacity: 0.3; }
+}
+
+#userInput:focus {
+    border-color: #B76E79;
+    box-shadow: 0 10px 10px -10px #B76E79;
+    transition: 0.4s ease;
+}
